@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivMas"
+            android:layout_width="@dimen/cantidad"
+            android:layout_height="@dimen/cantidad"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/ivMenos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_action_plusone"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/ivMenos"
+            android:layout_width="@dimen/cantidad"
+            android:layout_height="@dimen/cantidad"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMas"
+            app:srcCompat="@drawable/ic_action_minusone"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/tvNumeroUnidades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvUnidades"
+            app:layout_constraintStart_toStartOf="@+id/tvUnidades"
+            app:layout_constraintTop_toBottomOf="@+id/tvUnidades" />
+
+        <TextView
+            android:id="@+id/tvUnidades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unidades"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvNumeroUnidades"
+            app:layout_constraintEnd_toStartOf="@+id/ivMas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvProducto"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvProducto"
+            app:layout_constraintStart_toStartOf="@+id/tvProducto"
+            app:layout_constraintTop_toBottomOf="@+id/tvProducto" />
+
+        <TextView
+            android:id="@+id/tvProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/producto"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvNombreProducto"
+            app:layout_constraintEnd_toStartOf="@+id/tvUnidades"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
